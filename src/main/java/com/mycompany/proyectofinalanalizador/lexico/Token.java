@@ -7,10 +7,39 @@ package com.mycompany.proyectofinalanalizador.lexico;
  */
 public class Token {
     
-public void probando(){
+private String texto;
+    private String tipo;
+    private int fila;
+    private int columna;
 
-    System.out.println("progando");
+    public Token(String texto, String tipo, int fila, int columna) {
+        this.texto = texto;
+        this.tipo = tipo;
+        this.fila = fila;
+        this.columna = columna;
+    }
     
-}
+     
+
+    public String getTexto() {
+        return texto;
+    }
+
     
+
+    public String getTipo() {
+        return tipo;
+    }
+
+   
+
+    public int getFila() {
+        return fila;
+    }
+
+   
+
+    public int getColumna() {
+        return columna;
+    } 
 }
