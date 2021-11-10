@@ -22,9 +22,12 @@ public class Automata {
     private JTextArea AreaCargaArchivo;//variable que tendra el texto ingresado
     private ArrayList<Error> errores = new ArrayList<>();//Arraylist para los errores
     private ArrayList<Token> Tokens = new ArrayList<>();//Arraylist para los token
+    //Arraylist Enums
     private final EnumTipo InstanciasTipo[] = EnumTipo.values();//Arraylist de enums para acceder a los diferentes tipos de token
     private final EnumPalabraReservada InstanciasPalabraReservada[]=EnumPalabraReservada.values();//Arraylist de enums para acceder a los diferentes tipos de palabras reservadas
-    //Constructor de la clase Automata 
+    private final EnumCaracter InstanciasCaractere[]=EnumCaracter.values();//Arraylist de enum para acceder a los diferentes tipos de caracteres
+
+//Constructor de la clase Automata 
     public Automata(JTextArea TextoEntrada) {
         this.AreaCargaArchivo = TextoEntrada;
         InicializarMatriz();//Metodo que inicia la matriz
@@ -145,6 +148,7 @@ public class Automata {
             columna = 0;
         }
     }
+    
 
     //Metodo para analizar cada palabra que tenemos en nuestro tex area
     private void AnalizarPalabra(String PalabraTexto) {
